@@ -26,8 +26,10 @@ export default class HomeGame extends Phaser.Scene {
     btnPlay = this.add.image(400, 400, "btnPlay");
     btnPlay.setInteractive({ cursor: "pointer" });
     btnPlay.on("pointerdown", () => {
+      this.cameras.main.fadeOut(1000, 0, 0, 1000)
       this.sound.play("click");
       audioHome.pause()
+      this.scene.start("Scene1")
     });
 
     btnOptions = this.add.image(400, 500, "btnOptions");
