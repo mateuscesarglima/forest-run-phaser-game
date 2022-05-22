@@ -34,6 +34,8 @@ export default class HomeGame extends Phaser.Scene {
     btnOptions.setInteractive({ cursor: "pointer" });
     btnOptions.on("pointerdown", () => {
       this.sound.play("click");
+      this.scene.start("Options")
+      audioHome.pause()
     });
 
     infoImg = this.add.image(750, 550, "info");
