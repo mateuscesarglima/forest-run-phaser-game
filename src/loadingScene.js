@@ -21,8 +21,11 @@ export default class LoadingScene extends Phaser.Scene {
     this.load.image("backgroundHomeImage", "src/assets/backgrounds/backgroundHome.png");
     this.load.image("btnPlay", "src/assets/buttons/playButton.png");
     this.load.image("btnOptions", "src/assets/buttons/optionsButton.png");
-    this.load.image("instrucoes", "src/assets/buttons/instrucoes.png");
     this.load.image("info", "src/assets/buttons/info.png");
+
+    //OPTIONS
+    this.load.image("instrucoes", "src/assets/buttons/instrucoes.png");
+    this.load.image("backBtn", "src/assets/buttons/arrow.png")
 
     //ITEMS
     this.load.image("heartIcon", "src/assets/items/heart.png");
