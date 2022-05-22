@@ -25,7 +25,7 @@ export default class LoadingScene extends Phaser.Scene {
 
     //OPTIONS
     this.load.image("instrucoes", "src/assets/buttons/instrucoes.png");
-    this.load.image("backBtn", "src/assets/buttons/arrow.png")
+    this.load.image("backBtn", "src/assets/buttons/arrow.png");
 
     //ITEMS
     this.load.image("heartIcon", "src/assets/items/heart.png");
@@ -35,8 +35,10 @@ export default class LoadingScene extends Phaser.Scene {
 
     //GROUNDS
     this.load.image("ground", "src/assets/grounds/ground.png");
+    this.load.image("wood", "src/assets/grounds/wood.png")
 
-    
+    //SCENE1
+    this.load.image("backgroundScene1", "src/assets/backgrounds/florestBackgroundScene1.jpg")
   }
 
   create() {}
