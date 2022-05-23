@@ -9,6 +9,7 @@ export default class EndGame extends Phaser.Scene {
   }
 
   create() {
+      
     this.add.image(0, 0, "endGameBackground").setOrigin(0, 0);
 
     this.sound.play("endGameAudio");
@@ -31,7 +32,6 @@ export default class EndGame extends Phaser.Scene {
     playAgainText.on("pointerdown", () => {
       this.sound.play("click");
       this.scene.start("Scene1");
-      endGameSound.pause();
     });
 
     menu.setInteractive({ cursor: "pointer" });
