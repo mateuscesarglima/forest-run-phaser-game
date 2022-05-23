@@ -38,6 +38,20 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
     });
   }
 
-  update() {
+  heal() {
+    this.scene.sound.play("getHeart");
+    this.scene.events.emit('increaseHP')
   }
+
+  takeDamage() {
+    this.scene.sound.play("getDamage");
+    this.scene.events.emit('decreaseHP')
+  }
+
+  getMap() {
+    this.scene.sound.play("getMap");
+    this.scene.events.emit('increaseScoreMap')
+  }
+
+  update() {}
 }

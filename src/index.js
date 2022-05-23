@@ -4,6 +4,8 @@ import HomeGame from "./homeGame"
 import LoadingScene from "./loadingScene"
 import Options from './options';
 import Scene1 from './scene1';
+import Scene2 from './scene2';
+import SceneUI from './sceneUI'
 
 
 const config = {
@@ -21,7 +23,7 @@ const config = {
             debug: true
         }
     },
-    scene: [LoadingScene, Options, HomeGame, Scene1, EndGame]
+    scene: [LoadingScene, Options, HomeGame, Scene1, Scene2, SceneUI, EndGame]
 };
 
 new Phaser.Game(config);

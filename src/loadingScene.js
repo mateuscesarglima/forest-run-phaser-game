@@ -16,8 +16,8 @@ export default class LoadingScene extends Phaser.Scene {
     this.load.audio("jump", "src/assets/audios/jump.wav");
     this.load.audio("getMap", "src/assets/audios/getMap.wav");
     this.load.audio("getHeart", "src/assets/audios/getHeart.wav");
-    this.load.audio("getDamage", "src/assets/audios/getDamage.wav")
-    this.load.audio("endGameAudio", "src/assets/audios/endGame.wav")
+    this.load.audio("getDamage", "src/assets/audios/getDamage.wav");
+    this.load.audio("endGameAudio", "src/assets/audios/endGame.wav");
     this.load.image("map", "src/assets/items/map.png");
 
     //HOME
@@ -38,12 +38,14 @@ export default class LoadingScene extends Phaser.Scene {
 
     //DAMAGETAKEN
     this.load.image("iceSpike", "src/assets/damageTaken/iceSpike.png");
-    this.load.image("rock", "src/assets/damageTaken/rocks.png")
-    
+    this.load.image("rock", "src/assets/damageTaken/rocks.png");
+    this.load.image("asteroid", "src/assets/damageTaken/asteroid.png")
 
     //GROUNDS
     this.load.image("ground", "src/assets/grounds/ground.png");
     this.load.image("wood", "src/assets/grounds/wood.png");
+    this.load.image("iceGround","src/assets/grounds/iceGround.png")
+
 
     //SPRITE
     this.load.spritesheet("player", "src/assets/sprite/anna.png", {
@@ -57,8 +59,17 @@ export default class LoadingScene extends Phaser.Scene {
       "src/assets/backgrounds/florestBackgroundScene1.jpg"
     );
 
+    //SCENE2
+    this.load.image(
+      "backgroundScene2",
+      "src/assets/backgrounds/backgroundMap2.png"
+    );
+
+    //SCENE3
+    this.load.image("backgroundScene3","src/assets/backgrounds/iceForest.png")
+
     //ENDGAME
-    this.load.image("endGameBackground", "src/assets/backgrounds/endGame.png")
+    this.load.image("endGameBackground", "src/assets/backgrounds/endGame.png");
   }
 
   create() {}
