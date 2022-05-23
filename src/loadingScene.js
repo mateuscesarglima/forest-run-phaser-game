@@ -39,13 +39,16 @@ export default class LoadingScene extends Phaser.Scene {
     //DAMAGETAKEN
     this.load.image("iceSpike", "src/assets/damageTaken/iceSpike.png");
     this.load.image("rock", "src/assets/damageTaken/rocks.png");
-    this.load.image("asteroid", "src/assets/damageTaken/asteroid.png")
+    this.load.image("asteroid", "src/assets/damageTaken/asteroid.png");
+    this.load.image("cactus", "src/assets/damageTaken/cactus.png")
+    this.load.image("rockLastScene", "src/assets/damageTaken/rockLastScene.png")
 
     //GROUNDS
     this.load.image("ground", "src/assets/grounds/ground.png");
     this.load.image("wood", "src/assets/grounds/wood.png");
-    this.load.image("iceGround","src/assets/grounds/iceGround.png")
-
+    this.load.image("iceGround", "src/assets/grounds/iceGround.png");
+    this.load.image("desertGround", "src/assets/grounds/terrain.png");
+    this.load.image("desertGroundSmall", "src/assets/grounds/terrainSmall.png");
 
     //SPRITE
     this.load.spritesheet("player", "src/assets/sprite/anna.png", {
@@ -66,7 +69,10 @@ export default class LoadingScene extends Phaser.Scene {
     );
 
     //SCENE3
-    this.load.image("backgroundScene3","src/assets/backgrounds/iceForest.png")
+    this.load.image("backgroundScene3", "src/assets/backgrounds/iceForest.png");
+
+    //SCENE4
+    this.load.image("backgroundScene4", "src/assets/backgrounds/desert.png");
 
     //ENDGAME
     this.load.image("endGameBackground", "src/assets/backgrounds/endGame.png");

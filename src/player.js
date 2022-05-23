@@ -4,7 +4,7 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
     super(scene, x, y, texture);
     scene.sys.updateList.add(this);
     scene.sys.displayList.add(this);
-    this.setScale(1);
+    this.setScale(0.8);
     scene.physics.world.enableBody(this);
     this.setCollideWorldBounds();
     this.scoreMap = scoreMap;
@@ -18,14 +18,14 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
         start: 17,
         end: 9,
       }),
-      frameRate: 10,
+      frameRate: 25,
       repeat: -1,
     });
 
     this.anims.create({
       key: "turn",
       frames: [{ key: "player", frame: 19 }],
-      frameRate: 20,
+      frameRate: 25,
     });
 
     this.anims.create({
@@ -34,7 +34,7 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
         start: 28,
         end: 36,
       }),
-      frameRate: 10,
+      frameRate: 25,
     });
   }
 

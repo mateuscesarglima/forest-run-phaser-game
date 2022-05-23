@@ -27,7 +27,11 @@ export default class Scene1 extends Phaser.Scene {
 
     var platforms = this.physics.add.staticGroup();
     platforms.create(400, 575, "ground");
-    platforms.create(700, 400, "wood");
+    platforms.create(700, 500, "wood");
+    platforms.create(750, 450, "wood");
+    platforms.create(800, 400, "wood");
+    platforms.create(850, 350, "wood");
+    platforms.create(250, 350, "wood");
     platforms.create(100, 300, "wood");
     platforms.create(750, 200, "wood");
 
@@ -41,21 +45,16 @@ export default class Scene1 extends Phaser.Scene {
 
     rocks.children.iterate(this.configSon);
 
-    heart = this.physics.add.image(750, 100, "heartIcon");
-
     this.player = new Player({
       scene: this,
-      x: 100,
-      y: 400,
+      x: 10,
+      y: 500,
       texture: "player",
       hp: this.UI.hp,
       scoreMap: this.UI.scoreMap,
     });
 
-    this.map = new Item({scene: this, x: 80, y: 400, texture: 'map'})
-    this.map.scene.physics.add
-
-    map = this.physics.add.image(50, 220, "map");
+    var map = new Item({scene: this, x: 30, y: 100, texture: 'map'})
 
     this.keyboard = this.input.keyboard.addKeys("W, A, D");
 
@@ -66,7 +65,6 @@ export default class Scene1 extends Phaser.Scene {
     this.physics.add.overlap(this.player, rocks, this.hitRock, null, this);
     this.physics.add.overlap(this.player, heart, this.getHeart, null, this);
     this.physics.add.collider(platforms, heart);
-    this.physics.add.collider(platforms, this.map)
   }
 
   update() {
