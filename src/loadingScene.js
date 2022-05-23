@@ -17,6 +17,7 @@ export default class LoadingScene extends Phaser.Scene {
     this.load.audio("getMap", "src/assets/audios/getMap.wav");
     this.load.audio("getHeart", "src/assets/audios/getHeart.wav");
     this.load.audio("getDamage", "src/assets/audios/getDamage.wav")
+    this.load.audio("endGameAudio", "src/assets/audios/endGame.wav")
     this.load.image("map", "src/assets/items/map.png");
 
     //HOME
@@ -55,6 +56,9 @@ export default class LoadingScene extends Phaser.Scene {
       "backgroundScene1",
       "src/assets/backgrounds/florestBackgroundScene1.jpg"
     );
+
+    //ENDGAME
+    this.load.image("endGameBackground", "src/assets/backgrounds/endGame.png")
   }
 
   create() {}

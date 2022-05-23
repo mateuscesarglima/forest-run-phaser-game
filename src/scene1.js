@@ -43,7 +43,7 @@ export default class Scene1 extends Phaser.Scene {
       x: 100,
       y: 400,
       texture: "player",
-      hp: 20,
+      hp: 1,
       scoreMap: 0,
     });
 
@@ -105,25 +105,25 @@ export default class Scene1 extends Phaser.Scene {
   }
 
   hitRock(player, rock){
-      this.sound.play("getDamage")
-      if(this.player.hp > 0){
-          rock.disableBody(true, true);
-          this.player.hp -= 1;
-          hpText.setText("Life: " + this.player.hp)
-      }else{
-          this.physics.pause()
+    this.sound.play("getDamage")
+    if(this.player.hp > 0){
+        rock.disableBody(true, true);
+        this.player.hp -= 1;
+        hpText.setText("Life: " + this.player.hp)
+    }else{
+        this.physics.pause()
 
-          this.player.setTint(0xff0000)
-          this.player.anims("turn")
-          this.cameras.main.fadeOut(500, 0, 0, 0)
-          this.cameras.main.once(
-            Phaser.Cameras.Scene2D.Events.FADE_OUT_COMPLETE,
-            () => {
-              this.scene.start("EndGame");
-            }
-          );
-      }
-  }
+        this.player.setTint(0xff0000)
+        this.player.anims.play("turn")
+        this.cameras.main.fadeOut(500, 0, 0, 0)
+        this.cameras.main.once(
+          Phaser.Cameras.Scene2D.Events.FADE_OUT_COMPLETE,
+          () => {
+            this.scene.start("EndGame");
+          }
+        );
+    }
+}
 
   collectMap(player, map) {
     map.disableBody(true, true);
@@ -134,8 +134,10 @@ export default class Scene1 extends Phaser.Scene {
     this.cameras.main.once(
         Phaser.Cameras.Scene2D.Events.FADE_OUT_COMPLETE,
         () =>{
-            this.scene.start("scene2");
+            this.scene.start("Scene2");
         }
     )
   }
 }
+
+
