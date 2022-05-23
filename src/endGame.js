@@ -9,6 +9,8 @@ export default class EndGame extends Phaser.Scene {
   }
 
   create() {
+
+    this.UI = this.scene.get('SceneUI')
       
     this.add.image(0, 0, "endGameBackground").setOrigin(0, 0);
 
@@ -32,13 +34,16 @@ export default class EndGame extends Phaser.Scene {
     playAgainText.on("pointerdown", () => {
       this.sound.play("click");
       this.scene.start("Scene1");
+      this.UI.scene.restart()
+      this.scene1 = this.scene.get('Scene1')
+      this.scene1.scene.restart('Scene1')
     });
 
     menu.setInteractive({ cursor: "pointer" });
     menu.on("pointerdown", () => {
       this.sound.play("click");
       this.scene.start("HomeGame");
-      endGameSound.pause();
+      this.UI.scene.restart()
     });
   }
 }

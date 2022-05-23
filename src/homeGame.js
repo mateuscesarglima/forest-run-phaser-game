@@ -7,13 +7,18 @@ export default class HomeGame extends Phaser.Scene {
     super("HomeGame");
   }
 
-  preload() {}
+  preload() {
+   
+  }
 
   create() {
+
+    this.scene.setVisible(false, 'SceneUI')
+
     this.add.image(0, 0, "backgroundHomeImage").setOrigin(0, 0);
     var audioHome = this.sound.add('florest')
 
-    
+
     audioHome.play()
 
     this.add.text(250, 200, "FOREST RUN", {
