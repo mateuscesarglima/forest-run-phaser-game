@@ -49,7 +49,7 @@ export default class Scene2 extends Phaser.Scene {
       y: 500,
       texture: "player",
       hp: this.UI.hp,
-      scoreMap: this.UI.scoreMap,
+      scoreMap: this.UI.score,
     });
 
     heart = new Item({scene: this, x: 30, y: 150, texture: 'heartIcon'})
