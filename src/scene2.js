@@ -17,6 +17,7 @@ export default class Scene2 extends Phaser.Scene {
   create() {
     this.UI = this.scene.get("SceneUI");
     this.cameras.main.fadeIn(1000, 0, 0, 0);
+
     this.add.image(0, 0, "backgroundScene2").setOrigin(0, 0);
     var platforms = this.physics.add.staticGroup();
     platforms.create(400, 575, "ground");

@@ -19,6 +19,7 @@ export default class LoadingScene extends Phaser.Scene {
     this.load.audio("getDamage", "src/assets/audios/getDamage.wav");
     this.load.audio("endGameAudio", "src/assets/audios/endGame.wav");
     this.load.audio("lastSceneAudio", "src/assets/audios/lastSceneSound.wav")
+    this.load.audio("musicInfo", "src/assets/audios/musicInfo.mp3")
     this.load.image("map", "src/assets/items/map.png");
     this.load.image("cursor", "src/assets/cursor/cursor.png")
 
@@ -57,6 +58,9 @@ export default class LoadingScene extends Phaser.Scene {
       frameWidth: 64,
       frameHeight: 64,
     });
+
+    //INFOSCENE
+    this.load.image("infoBackground", "src/assets/backgrounds/infoImage.png")
 
     //SCENE1
     this.load.image(

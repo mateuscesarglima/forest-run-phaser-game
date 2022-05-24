@@ -6,7 +6,7 @@ var rocks;
 var heart;
 var hpText;
 var scoreMapText;
-
+let backBtn
 export default class Scene1 extends Phaser.Scene {
   constructor() {
     super({
@@ -18,8 +18,8 @@ export default class Scene1 extends Phaser.Scene {
 
   create() {
     this.UI = this.scene.get("SceneUI");
-    this.UI.scene.setVisible(true, 'SceneUI')
-    
+    this.UI.scene.setVisible(true, "SceneUI");
+
     this.cameras.main.fadeIn(1000, 0, 0, 0);
     this.add.image(0, 0, "backgroundScene1").setOrigin(0, 0);
 
@@ -54,7 +54,7 @@ export default class Scene1 extends Phaser.Scene {
       scoreMap: this.UI.score,
     });
 
-    var map = new Item({scene: this, x: 30, y: 100, texture: 'map'})
+    var map = new Item({ scene: this, x: 30, y: 100, texture: "map" });
 
     this.keyboard = this.input.keyboard.addKeys("W, A, D");
 
@@ -119,7 +119,7 @@ export default class Scene1 extends Phaser.Scene {
   }
 
   collectMap(player, map) {
-    map.destroy()
+    map.destroy();
     this.player.getMap();
     // scoreMapText.setText("Maps colected: " + this.player.scoreMap);
     this.cameras.main.fadeOut(500, 0, 0, 0);
@@ -128,11 +128,11 @@ export default class Scene1 extends Phaser.Scene {
       () => {
         this.scene.start("Scene2");
       }
-    )
+    );
   }
 
   getHeart(player, heart) {
-    heart.destroy()
+    heart.destroy();
     this.player.heal();
     // hpText.setText("HP: " + this.player.hp);
   }
