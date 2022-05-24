@@ -3,6 +3,7 @@ import EndGame from "./endGame";
 import HomeGame from "./homeGame";
 import LoadingScene from "./loadingScene";
 import Options from "./options";
+import InfoScene from "./infoScene";
 import Scene1 from "./scene1";
 import Scene2 from "./scene2";
 import Scene3 from "./scene3";
@@ -22,12 +23,13 @@ const config = {
     default: "arcade",
     arcade: {
       gravity: { y: 400 },
-      debug: true,
+      debug: false,
     },
   },
   scene: [
     LoadingScene,
     Options,
+    InfoScene,
     HomeGame,
     Scene1,
     Scene2,

@@ -15,12 +15,10 @@ export default class HomeGame extends Phaser.Scene {
 
     this.UI = this.scene.get("SceneUI")
 
-
     this.scene.setVisible(false, 'SceneUI')
 
     this.add.image(0, 0, "backgroundHomeImage").setOrigin(0, 0);
     var audioHome = this.sound.add('florest')
-
 
     audioHome.play()
 
@@ -61,6 +59,8 @@ export default class HomeGame extends Phaser.Scene {
     infoImg.setInteractive({ cursor: "pointer" });
     infoImg.on("pointerdown", () => {
       this.sound.play("click");
+      this.scene.start("InfoScene");
+      audioHome.pause()
     });
   }
 }
