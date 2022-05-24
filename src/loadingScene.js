@@ -20,6 +20,7 @@ export default class LoadingScene extends Phaser.Scene {
     this.load.audio("endGameAudio", "src/assets/audios/endGame.wav");
     this.load.audio("lastSceneAudio", "src/assets/audios/lastSceneSound.wav")
     this.load.image("map", "src/assets/items/map.png");
+    this.load.image("cursor", "src/assets/cursor/cursor.png")
 
     //HOME
     this.load.image(
@@ -31,7 +32,7 @@ export default class LoadingScene extends Phaser.Scene {
     this.load.image("info", "src/assets/buttons/info.png");
 
     //OPTIONS
-    this.load.image("instrucoes", "src/assets/buttons/instrucoes.png");
+    this.load.image("instrucoes", "src/assets/backgrounds/instructions.png");
     this.load.image("backBtn", "src/assets/buttons/arrow.png");
 
     //ITEMS
@@ -82,7 +83,8 @@ export default class LoadingScene extends Phaser.Scene {
     this.load.image("endGameBackground", "src/assets/backgrounds/endGame.png");
   }
 
-  create() {}
-
+  create() {
+    
+  }
   update() {}
 }
