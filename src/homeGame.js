@@ -14,9 +14,7 @@ export default class HomeGame extends Phaser.Scene {
   create() {
 
     this.UI = this.scene.get("SceneUI")
- 
 
-   
 
     this.scene.setVisible(false, 'SceneUI')
 
@@ -26,10 +24,10 @@ export default class HomeGame extends Phaser.Scene {
 
     audioHome.play()
 
-    this.add.text(250, 200, "FOREST RUN", {
+    this.add.text(245, 200, "FOREST RUN", {
       fontFamily: "Times New Roman",
-      resolution: 50,
-      fontSize: "50px",
+      resolution: "50",
+      font: "50px",
       color: "#FFF",
     });
 
