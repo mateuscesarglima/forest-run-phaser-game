@@ -60,7 +60,7 @@ export default class Scene4 extends Phaser.Scene {
       y: 500,
       texture: "player",
       hp: this.UI.hp,
-      scoreMap: this.UI.scoreMap,
+      scoreMap: this.UI.score,
     });
 
     this.physics.world.addCollider(this.player, platforms);
@@ -136,7 +136,7 @@ export default class Scene4 extends Phaser.Scene {
     this.cameras.main.once(
       Phaser.Cameras.Scene2D.Events.FADE_OUT_COMPLETE,
       () => {
-        this.scene.start("Scene4");
+        this.scene.start("SceneFinal");
       }
     );
   }

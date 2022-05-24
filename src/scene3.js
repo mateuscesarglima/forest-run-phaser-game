@@ -54,7 +54,7 @@ export default class Scene3 extends Phaser.Scene {
       y: 500,
       texture: "player",
       hp: this.UI.hp,
-      scoreMap: this.UI.scoreMap,
+      scoreMap: this.UI.score,
     });
 
     this.physics.world.addCollider(this.player, platforms);
