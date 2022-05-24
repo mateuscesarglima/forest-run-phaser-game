@@ -7,6 +7,7 @@ import Scene1 from "./scene1";
 import Scene2 from "./scene2";
 import Scene3 from "./scene3";
 import Scene4 from "./scene4";
+import SceneFinal from "./sceneFinal"
 import SceneUI from "./sceneUI";
 
 const config = {
@@ -32,6 +33,7 @@ const config = {
     Scene2,
     Scene3,
     Scene4,
+    SceneFinal,
     SceneUI,
     EndGame,
   ],

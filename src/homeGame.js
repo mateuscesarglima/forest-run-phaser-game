@@ -13,6 +13,11 @@ export default class HomeGame extends Phaser.Scene {
 
   create() {
 
+    this.UI = this.scene.get("SceneUI")
+ 
+
+   
+
     this.scene.setVisible(false, 'SceneUI')
 
     this.add.image(0, 0, "backgroundHomeImage").setOrigin(0, 0);
@@ -28,16 +33,25 @@ export default class HomeGame extends Phaser.Scene {
       color: "#FFF",
     });
 
-    btnPlay = this.add.image(400, 400, "btnPlay");
+    btnPlay = this.add.text(320, 350, "< Play >", {
+      font: "40px Arial",
+      fill: "#FFF",
+      resolution: 10
+    });
     btnPlay.setInteractive({ cursor: "pointer" });
     btnPlay.on("pointerdown", () => {
       this.cameras.main.fadeOut(1000, 0, 0, 1000)
       this.sound.play("click");
       audioHome.pause()
-      this.scene.start("Scene4")
+      this.scene.start("Scene1")
+      // this.scene.start("SceneFinal")
     });
 
-    btnOptions = this.add.image(400, 500, "btnOptions");
+    btnOptions = this.add.text(260, 450, "< Instructions >", {
+      font: "40px Arial",
+      fill: "#FFF",
+      resolution: 10
+    });
     btnOptions.setInteractive({ cursor: "pointer" });
     btnOptions.on("pointerdown", () => {
       this.sound.play("click");
